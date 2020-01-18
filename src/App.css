@@ -1,0 +1,35 @@
+:root {
+  --text-shadow-color: #fff;
+  --header-font-family: 'Ultra', serif;
+  --details-font-family: 'Hammersmith One', sans-serif;
+}
+
+body {
+  background-color: rgba(0,0,0,0);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.player-container {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.logo-container {
+  padding: 0 10px;
+}
+.logo-container img {
+  width: 80px;
+}
+.details-container {
+  font-family: var(--details-font-family);
+  text-shadow: 2px 2px 0 var(--text-shadow-color), 2px -2px 0 var(--text-shadow-color), -2px 2px 0 var(--text-shadow-color), -2px -2px 0 var(--text-shadow-color), 2px 0px 0 var(--text-shadow-color), 0px 2px 0 var(--text-shadow-color), -2px 0px 0 var(--text-shadow-color), 0px -2px 0 var(--text-shadow-color);
+}
+.details-container h1 {
+  margin: 0;
+  font-family: var(--header-font-family)!important;
+}
+.details-container marquee {
+  margin: 0;
+  font-size: 32px;
+}
