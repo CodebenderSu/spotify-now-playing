@@ -22,6 +22,8 @@ body {
   width: 80px;
 }
 .details-container {
+  overflow: hidden;
+  flex-grow: 2;
   font-family: var(--details-font-family);
   text-shadow: 2px 2px 0 var(--text-shadow-color), 2px -2px 0 var(--text-shadow-color), -2px 2px 0 var(--text-shadow-color), -2px -2px 0 var(--text-shadow-color), 2px 0px 0 var(--text-shadow-color), 0px 2px 0 var(--text-shadow-color), -2px 0px 0 var(--text-shadow-color), 0px -2px 0 var(--text-shadow-color);
 }
@@ -29,7 +31,26 @@ body {
   margin: 0;
   font-family: var(--header-font-family)!important;
 }
-.details-container marquee {
+.details-container p {
   margin: 0;
   font-size: 32px;
+}
+.marquee {
+  transform: translateX(0%);
+  animation-delay: 3s;
+  animation: marquee 20s -8s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  70% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

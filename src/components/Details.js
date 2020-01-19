@@ -5,7 +5,7 @@ class Details extends Component {
     return (
       <div className='details-container'>
         <h1>You're listening to:</h1>
-        <marquee>"Raise Hell" by Dorothy</marquee>
+        <p className='marquee'>"Raise Hell" by Dorothy</p>
       </div>
     );
   };
