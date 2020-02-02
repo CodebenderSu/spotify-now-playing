@@ -15,9 +15,6 @@ class App extends Component {
     } else {
       getCurrentTrack(token);
     };
-    setInterval(() => {
-      getCurrentTrack(token);
-    }, 10000);
   };
   render() {
     const { currentTrack } = this.props;

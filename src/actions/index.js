@@ -22,6 +22,9 @@ export const getCurrentTrack = (token = null) => {
           'headers': { 'Authorization': `Bearer ${token}`}
         });
         dispatch({ type: 'GET_CURR_TRACK', payload: res.data });
+        setTimeout(() => {
+          dispatch(getCurrentTrack(token));
+        }, 10000);
       } catch (err) {
         console.log(err)
         if (err.message === 'Request failed with status code 401') {
