@@ -37,20 +37,21 @@ body {
 }
 .marquee {
   transform: translateX(0%);
-  animation-delay: 3s;
-  animation: marquee 20s -8s linear infinite;
+  overflow-x: visible;
+  white-space: nowrap;
+  animation: marquee 30s -7.5s linear infinite;
 }
 @keyframes marquee {
   0% {
     transform: translateX(100%);
   }
-  40% {
+  25% {
     transform: translateX(0%);
   }
-  70% {
+  45% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-300%);
   }
 }
