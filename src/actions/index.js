@@ -45,10 +45,10 @@ export const postRenewAccess = (callback = null) => {
       const res = await auth.post(uri.renew_access, body, {
         'headers': { 'Authorization': `Basic ${btoa(`${appId}:${appSecret}`)}`, 'Content-Type': 'application/x-www-form-urlencoded',}
       });
+      dispatch({ type: 'POST_RENEW_ACCESS', payload: res.data });
       if (callback) {
         dispatch(callback(res.data.access_token));
       };
-      dispatch({ type: 'POST_RENEW_ACCESS', payload: res.data });
     } catch (err) {
       dispatch({ type: 'POST_RENEW_ACCESS', payload: null });
     };
