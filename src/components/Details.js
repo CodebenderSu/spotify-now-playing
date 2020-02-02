@@ -12,7 +12,11 @@ class Details extends Component {
     const { currentTrack } = this.props;
     if (currentTrack.id !== prevProps.currentTrack.id) {
       this.setState({ didChange: true });
-    }
+    } else {
+      if (this.state.didChange) {
+        this.setState({ didChange: false });
+      };
+    };
   };
   render() {
     const { currentTrack } = this.props;
